@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Note-Taking App</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@3.4.0/dist/full.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-100">
+
+  <div class="container mx-auto py-10">
+    <h1 class="text-4xl font-bold text-center mb-8">Note-Taking App</h1>
+
+    <!-- Search Bar -->
+    <div class="flex justify-center mb-6">
+      <input id="searchInput" type="text" placeholder="Search notes..." 
+        class="input input-bordered w-full max-w-lg" />
+    </div>
+
+    <!-- Add Note Button -->
+    <div class="flex justify-center mb-6">
+      <button id="addNoteButton" class="btn btn-primary">Add New Note</button>
+    </div>
+
+    <!-- Notes Container -->
+    <div id="notesContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Notes will be dynamically added here -->
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div id="noteModal" class="modal hidden">
+    <div class="modal-box">
+      <h2 class="text-2xl font-bold mb-4" id="modalTitle">Add Note</h2>
+      <textarea id="noteContent" class="textarea textarea-bordered w-full h-32" placeholder="Write your note here..."></textarea>
+      <div class="modal-action">
+        <button id="saveNoteButton" class="btn btn-primary">Save</button>
+        <button id="closeModalButton" class="btn">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
